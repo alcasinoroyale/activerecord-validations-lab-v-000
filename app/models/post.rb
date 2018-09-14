@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   CLICKBAIT = [
     /Won't Believe/i,
     /Secret/i,
-    /Top[ 0-9]*/i,
+    /Top[0-9]*/i,
     /Guess/i
   ]
 
