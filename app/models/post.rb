@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   validates :summary, length: {maximum: 250}
   validates :category, inclusion: { in: %w(Fiction Non-Fiction)}
   validate :clickbaity?
+  
   CLICKBAIT = [
     /Won't Believe/i
     /Secret/i
