@@ -14,7 +14,7 @@ CLICKBAIT_PHRASES = [
   ]
 
   def is_clickbait?
-    if CLICKBAIT_PHRASES.none? { |pat| pat.match title }
+    if CLICKBAIT_PHRASES.none? { |phrase| phrase.match title }
       errors.add(:title, "must be clickbait")
     end
   end
