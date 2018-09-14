@@ -14,4 +14,6 @@ class Post < ActiveRecord::Base
   def clickbaity?
     if !ClICKBAIT.none? { |phrase| phrase.match title }
       errors.add(:title, "must be clickbait")
+    end
+  end
 end
