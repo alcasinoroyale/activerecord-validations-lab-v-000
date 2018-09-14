@@ -10,7 +10,8 @@ class Post < ActiveRecord::Base
     /Top[0-9]*/i
     /Guess/i
   ]
-  
+
   def clickbaity?
-    if !ClICKBAIT.none? { |phrase| phrase.match 
+    if !ClICKBAIT.none? { |phrase| phrase.match title }
+      errors.add(:title, "must be clickbait")
 end
